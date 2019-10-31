@@ -1,5 +1,5 @@
 {
-  "name": "full-function-proxy",
+  "name": "netlify-lambda-product-proxy",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
