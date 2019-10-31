@@ -1,7 +1,7 @@
 exports.handler = async function(event, context, callback) {
-  // path will come in as `/<some-product-id>/<rest>
+  // path will come in as `/product/<some-product-id>/<rest>
   const pathArr = event.path.split("/");
-  const productId = pathArr[1];
+  const productId = pathArr[2];
   console.log(`Product id is ${productId}`);
 
   const body = productId
