@@ -1,11 +1,14 @@
 exports.handler = async function(event, context, callback) {
-  // path will come in as `/product/<some-product-id>/<rest>
+  // path will come in as `/<some-product-id>/<rest>
   const pathArr = event.path.split("/");
-  const productId = pathArr[2] || "invalid-product";
+  const productId = pathArr[1];
   console.log(`Product id is ${productId}`);
-  const message = `<h1>Product id = ${productId}!</h1>`;
+
+  const body = productId
+    ? `<h1>Product id = ${productId}</h1>`
+    : "Missing product!";
   callback(null, {
     statusCode: 200,
-    body: `${message}`
+    body: `${body}`
   });
 };
